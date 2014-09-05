@@ -23,7 +23,7 @@
     .navbar-inverse .navbar-brand:focus { color: #222222; background-color: transparent; }
 
 
-.masthead .navbar-inverse .navbar-nav > li > a { border-right: 1px solid #222222; color: #fff; }
+.masthead .navbar-inverse .navbar-nav > li > a { border-right: 1px solid #fff; color: #000; }
 
 
 .top-menu ul.dropdown-menu > li > a { background-color: #fff; color: #FFF; }
