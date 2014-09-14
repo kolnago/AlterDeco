@@ -2196,6 +2196,7 @@
     <Content Include="Themes\AlterDeco340\Views\Topic\TopicBlock.cshtml" />
     <Content Include="Themes\AlterDeco340\Views\Topic\TopicDetails.cshtml" />
     <Content Include="Themes\AlterDeco340\Views\Web.config" />
+    <Content Include="Themes\AlterDeco340\Views\Catalog\ManufacturerAll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />
