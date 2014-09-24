@@ -6,7 +6,7 @@
 
 
     <div class="input-group">
-        <input type="text" class="form-control" id="small-searchterms" @(Model.AutoCompleteEnabled ? Html.Raw(" autocomplete=\"off\"") : null)
+        <input type="text" class="form-control form-size" id="small-searchterms" @(Model.AutoCompleteEnabled ? Html.Raw(" autocomplete=\"off\"") : null)
                     value="@T("Search.SearchBox.Tooltip")" name="q"  onfocus="if(this.value=='@T("Search.SearchBox.Tooltip")')this.value=''" onblur="if(this.value=='') {this.value = '@T("Search.SearchBox.Tooltip")';}" />
         <span class="input-group-btn">
             <button type="submit" class="btn btn-default"> @T("Search") </button>
