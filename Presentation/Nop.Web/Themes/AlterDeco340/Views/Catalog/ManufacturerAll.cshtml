@@ -6,27 +6,80 @@
     Html.AddTitleParts(T("PageTitle.Manufacturers").Text);
 }
 @using Nop.Web.Models.Catalog;
-<div class="row">
-    <div class="panel-heading">
-        <h1>@T("Manufacturers.List") alter</h1>
-    </div>
-    <div class="page-body">
-        <div class="manufacturer-grid">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-4">
-                    <div class="manufacturer-item">
-                        <h2 class="title">
-                            <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.SeName })" title="@item.PictureModel.Title">
-                                @item.Name</a>
-                        </h2>
-                        <div class="picture">
-                            <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.SeName })" title="@item.PictureModel.Title">
-                                <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl" title="@item.PictureModel.Title" /></a>
-                        </div>
+
+@*breadcrumb*@
+<div>
+    <ol class="breadcrumb">
+        <li><a href="@Url.RouteUrl("HomePage")" title="@T("Categories.Breadcrumb.Top")">@T("Categories.Breadcrumb.Top")</a></li>
+    </ol>
+</div>
+
+<div class="page category-page">
+    <div class="panel panel-default form-panel">
+        <div class="panel-heading">
+            <h3>@T("Manufacturers.List")</h3>
+        </div>
+        <div class="panel-body">
+            <div class="page-body">
+                @*description*@
+
+                @*<div class="category-description">
+                    Description - static
+                </div>*@
+                <div class="row">
+
+                    <div class="product-grid home-page-product-grid">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-4">
+                                <div class="pull-text-center">
+                                    <div class="picture">
+                                        <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.SeName })" title="@item.PictureModel.Title">
+                                            <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl" title="@item.PictureModel.Title" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <h2 class="product-title">
+                                            <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.SeName })" title="@item.PictureModel.Title">
+                                                @item.Name
+                                            </a>
+                                        </h2>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        @*<div class="row">
+                <div class="panel-heading">
+                    <h1>@T("Manufacturers.List") alter</h1>
+                </div>
+                <div class="page-body">
+                    <div class="manufacturer-grid">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-4">
+                                <div class="manufacturer-item">
+                                    <h2 class="title">
+                                        <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.SeName })" title="@item.PictureModel.Title">
+                                            @item.Name
+                                        </a>
+                                    </h2>
+                                    <div class="picture">
+                                        <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.SeName })" title="@item.PictureModel.Title">
+                                            <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl" title="@item.PictureModel.Title" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
                     </div>
                 </div>
-            }
-        </div>
+            </div>*@
     </div>
 </div>
