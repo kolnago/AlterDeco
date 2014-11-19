@@ -47,7 +47,7 @@
     else
     {
         addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, });
-    }    
+    }
 }
 <div class="product-item" data-productid="@Model.Id">
 <div class="white-box">
@@ -67,7 +67,7 @@
                                                       SeName = Model.SeName
                                                   })"> @Text_Truncate(Model.Name, 30)</a>
         </h2>
-        @if(Model.ReviewOverviewModel.AllowCustomerReviews)
+        @*@if(Model.ReviewOverviewModel.AllowCustomerReviews)
         {
             int ratingPercent = 0;
             if(Model.ReviewOverviewModel.TotalReviews != 0)
@@ -80,7 +80,8 @@
                     </div>
                 </div>
             </div>
-        }
+            <p>kurvaaa</p>
+        }*@
         <div class="description">
             @if(!String.IsNullOrEmpty(Model.ShortDescription))
             {

@@ -74,7 +74,7 @@
         </li>
 
     }
-    @if (Model.WishlistEnabled)
+    @*@if (Model.WishlistEnabled)
     {
         <li>
             <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">
@@ -82,7 +82,7 @@
                 <span class="wishlist-qty">@T("Wishlist.HeaderQuantity", Model.WishlistItems)</span>
             </a>
         </li>
-    }
+    }*@
     <li>
         @Html.Action("TaxTypeSelector", "Common")
     </li>

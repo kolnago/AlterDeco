@@ -83,7 +83,7 @@
                         <!--product manufacturers-->
                         @Html.Partial("_ProductManufacturers", Model.ProductManufacturers)
                         <!--product reviews-->
-                        @Html.Partial("_ProductReviewOverview", Model.ProductReviewOverview)
+                        @*@Html.Partial("_ProductReviewOverview", Model.ProductReviewOverview)*@
                         <!--sample download-->
                         @Html.Partial("_DownloadSample", Model)
                         <!--attributes-->
@@ -108,12 +108,12 @@
                             dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", Model.Id);
                             @Html.Partial("_AddToCart", Model.AddToCart, dataDictAddToCart)                    
                         }
-                        <div class= "form-group row">
+                        @*<div class= "form-group row">
                             @Html.Partial("_ProductEmailAFriendButton", Model)
                             @Html.Partial("_CompareProductsButton", Model)
                             
-                        </div>
-                        @Html.Partial("_ShareButton", Model)
+                        </div>*@
+                        @*@Html.Partial("_ShareButton", Model)*@
                         @Html.Widget("productdetails_overview_bottom")
                     </div>
 
