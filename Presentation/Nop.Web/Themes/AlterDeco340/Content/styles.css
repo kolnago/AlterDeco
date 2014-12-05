@@ -576,7 +576,20 @@ Page: Product Details START
 
         .product-details-page .product-variant-list .product-variant-line:after { content: "."; display: block; clear: both; height: 0; font-size: 0; line-height: 0; visibility: hidden; }
 
-.add-to-cart-button { padding: 5px 10px; cursor: pointer; background: #7DB72F; background: -webkit-gradient(linear,left top,left bottom,from(#7DB72F),to(#4E7D0E)); background: -moz-linear-gradient(top,#7DB72F,#4E7D0E); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7DB72F',endColorstr='#4E7D0E'); color: #fff; text-shadow: none; border-color: #999; border: 0 none; font-weight: 700; font-size: 1.3em; }
+.add-to-cart-button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #7DB72F;
+    background: -webkit-gradient(linear,left top,left bottom,from(#7DB72F),to(#4E7D0E));
+    background: -moz-linear-gradient(top,#7DB72F,#4E7D0E);
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7DB72F',endColorstr='#4E7D0E');*/
+    color: #fff;
+    text-shadow: none;
+    border-color: #999;
+    border: 0 none;
+    font-weight: 700;
+    font-size: 1.3em;
+}
 
 
 .product-details-page .product-variant-list .add-to-cart-button { margin-left: 0; display: block; }
@@ -837,8 +850,16 @@ FLY OUT Shopping Cart END
 
 .test.collapse { padding-right: 0px; padding-left: 0px; }
 
-.navbar-collapse.test /*{ background-color: #FFF; }*/
-
+@media (min-width:769px) {
+    .navbar-collapse.test {
+        background-color: none;
+    }
+}
+@media (max-width:768px) {
+    .navbar-collapse.test {
+        background-color: #fff;
+    }
+}
 /*Ending of Fixed Top Menu*/
 /*media query for auto hover dropdown on desktops start*/
 
