@@ -34,13 +34,13 @@
     @if (Model.ShoppingCartEnabled)
     {
         <li id="topcartlink" class="dropdown">
-            <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart hidden-md hidden-lg">
+            @*<a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart hidden-md hidden-lg">
                 <span class="cart-label">@T("ShoppingCart")</span>
                 <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
 
 
-            </a>
-            
+            </a>*@
+
             <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart">
                 <span class="cart-label">@T("ShoppingCart")</span>
                 <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
@@ -51,14 +51,14 @@
 
     }
     @*@if (Model.WishlistEnabled)
-    {
-        <li>
-            <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">
-                <span class="cart-label">@T("Wishlist")</span>
-                <span class="wishlist-qty">@T("Wishlist.HeaderQuantity", Model.WishlistItems)</span>
-            </a>
-        </li>
-    }*@
+        {
+            <li>
+                <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">
+                    <span class="cart-label">@T("Wishlist")</span>
+                    <span class="wishlist-qty">@T("Wishlist.HeaderQuantity", Model.WishlistItems)</span>
+                </a>
+            </li>
+        }*@
     <li>
         @Html.Action("TaxTypeSelector", "Common")
     </li>

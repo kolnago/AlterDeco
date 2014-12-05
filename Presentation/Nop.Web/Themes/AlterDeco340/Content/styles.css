@@ -246,7 +246,7 @@ div.newsletter-subscribe-block > div.newsletter-email { padding: 10px 0px; }
 
 .offer-default { border-color: #999999; padding: 10px 10px 10px 10px; }
 
-.silde-show-offer { height: 400px; }
+.silde-show-offer { height: auto; }
 
 .picture.thumbnail { margin: 5px 0 0 10px; }
 
@@ -837,7 +837,7 @@ FLY OUT Shopping Cart END
 
 .test.collapse { padding-right: 0px; padding-left: 0px; }
 
-.navbar-collapse.test { background-color: #FFF; }
+.navbar-collapse.test /*{ background-color: #FFF; }*/
 
 /*Ending of Fixed Top Menu*/
 /*media query for auto hover dropdown on desktops start*/
