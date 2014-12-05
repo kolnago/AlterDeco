@@ -780,13 +780,13 @@ Product view START
     .product-list .add-info .new-prices { font-size: 1.3em; font-weight: bold; }
 
 
-.product-grid .add-info { position: absolute; left: 0; text-align: center; bottom: 0; width: 100%; height: 28%; padding: 0px 16px 0px 16px; }
+.product-grid .add-info {left: 0; text-align: center; bottom: 0; width: 100%; height: 28%; padding: 0px 16px 0px 16px; }
 
 .product-grid .white-box { height: 282px; }
 
 .product-grid .ash-box { height: 104px; background-color: #F5F5F5; padding-top: 2px; padding-bottom: 2px; }
 
-    .product-grid .ash-box .prices { height: 25px; margin-top: 10px; font-size: 1.1em; }
+    .product-grid .ash-box .prices { height: 25px; margin-top: 10px;  font-size: 1.1em; }
 
     .product-grid .ash-box .new-prices { height: 25px; margin-top: 10px; font-size: 1.4em; font-weight: bold; }
 

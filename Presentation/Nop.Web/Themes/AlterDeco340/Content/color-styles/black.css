@@ -8,7 +8,7 @@
 
 .btn.btn-default { color: #fff; background-color: #222222; border-color: #222222; }
 
-    .btn.btn-default:hover,.btn.btn-default:active,.btn.btn-default:focus { color: #fff; background-color: #000000; border-color: #000000; }
+.btn.btn-default:hover,.btn.btn-default:active,.btn.btn-default:focus { color: #fff; background-color: #000000; border-color: #000000; }
 .panel.panel-default.side-nav, .panel.panel-default.form-panel { border-top: 4px solid #222222; }
 
 .mid-content-title { padding: 8px 12px; background-color: #f0f0f0; color: #000; border-bottom: 2px solid #222222; margin: 0; }
