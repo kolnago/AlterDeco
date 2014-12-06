@@ -1569,7 +1569,6 @@
     <Content Include="Themes\AlterDeco340\Content\images\star-x-active.png" />
     <Content Include="Themes\AlterDeco340\Content\images\star-x-inactive.png" />
     <Content Include="Themes\AlterDeco340\Content\images\styles.rtl.css" />
-    <Content Include="Themes\AlterDeco340\Content\styles - Copy.css" />
     <Content Include="Themes\AlterDeco340\Content\styles.css" />
     <Content Include="Themes\AlterDeco340\Content\styles.rtl.css" />
     <Content Include="Themes\AlterDeco340\preview.jpg" />
@@ -2198,6 +2197,10 @@
     <Content Include="Themes\AlterDeco340\Views\Topic\TopicDetails.cshtml" />
     <Content Include="Themes\AlterDeco340\Views\Web.config" />
     <Content Include="Themes\AlterDeco340\Views\Catalog\ManufacturerAll.cshtml" />
+    <Content Include="Themes\AlterDeco340\Views\Product\ProductTemplate.Gallery.cshtml" />
+    <Content Include="Themes\AlterDeco340\Views\Catalog\CategoryTemplate.Gallery.cshtml" />
+    <Content Include="Themes\AlterDeco340\Views\Product\_ProductDetailsPicturesGallery.cshtml" />
+    <Content Include="Themes\AlterDeco340\Views\Shared\_ProductBoxGallery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />

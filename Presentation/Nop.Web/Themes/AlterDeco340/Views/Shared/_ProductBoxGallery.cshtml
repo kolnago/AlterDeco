@@ -1,0 +1,64 @@
+﻿@model ProductOverviewModel
+@using Nop.Core
+@using Nop.Core.Domain.Orders
+@using Nop.Core.Domain.Tax
+@using Nop.Core.Infrastructure
+@using Nop.Web.Extensions
+@using Nop.Web.Models.Catalog;
+
+@helper Text_Truncate(string input, int length)
+{
+    if (input.Length <= length)
+    {
+        @Html.Raw(@input)
+    }
+    else
+    {
+        @Html.Raw(@input.Substring(0, length))<text>...</text>
+    }
+
+
+}
+
+
+@helper Price_Modifier(string input, int length)
+{
+    if (input.Length <= length)
+    {
+        @Html.Raw(@input)
+    }
+    else
+    {
+        @Html.Raw(@input.Substring(0, length))<text>...</text>
+    }
+
+
+}
+
+@{
+    //prepare "Add to cart" AJAX link
+    string addtocartlink = "";
+    var shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart;
+    var quantity = 1;
+    if (Model.ProductPrice.ForceRedirectionAfterAddingToCart)
+    {
+        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, forceredirection = Model.ProductPrice.ForceRedirectionAfterAddingToCart });
+    }
+    else
+    {
+        addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, });
+    }
+}
+<div class="product-item" data-productid="@Model.Id">
+    <a href="@Url.RouteUrl("Product", new { SeName = Model.SeName })" title="@Model.DefaultPictureModel.Title">
+        <img class="img-responsive" alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" />
+    </a>
+    <h2 class="product-title">
+        <a href="@Url.RouteUrl("Product", new
+                {
+                    SeName = Model.SeName
+                })">@Text_Truncate(Model.Name, 30)</a>
+            </h2>
+        </div>
+
+
