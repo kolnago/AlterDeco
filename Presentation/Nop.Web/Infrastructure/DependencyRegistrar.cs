@@ -4,6 +4,7 @@ using Nop.Core.Caching;
 using Nop.Core.Infrastructure;
 using Nop.Core.Infrastructure.DependencyManagement;
 using Nop.Web.Controllers;
+using Nop.Web.Infrastructure.Gallery;
 using Nop.Web.Infrastructure.Installation;
 
 namespace Nop.Web.Infrastructure
@@ -36,6 +37,8 @@ namespace Nop.Web.Infrastructure
             
             //installation localization service
             builder.RegisterType<InstallationLocalizationService>().As<IInstallationLocalizationService>().InstancePerLifetimeScope();
+
+            builder.RegisterType<GalleryService>().AsSelf();
         }
 
         public int Order

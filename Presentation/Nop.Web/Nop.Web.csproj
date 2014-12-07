@@ -187,6 +187,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\Gallery\GalleryService.cs" />
     <Compile Include="Controllers\BasePublicController.cs" />
     <Compile Include="Controllers\BoardsController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -2199,8 +2200,9 @@
     <Content Include="Themes\AlterDeco340\Views\Catalog\ManufacturerAll.cshtml" />
     <Content Include="Themes\AlterDeco340\Views\Product\ProductTemplate.Gallery.cshtml" />
     <Content Include="Themes\AlterDeco340\Views\Catalog\CategoryTemplate.Gallery.cshtml" />
-    <Content Include="Themes\AlterDeco340\Views\Product\_ProductDetailsPicturesGallery.cshtml" />
+    <Content Include="Themes\AlterDeco340\Views\Shared\_ProductDetailsPicturesGallery.cshtml" />
     <Content Include="Themes\AlterDeco340\Views\Shared\_ProductBoxGallery.cshtml" />
+    <Content Include="Themes\AlterDeco340\Views\Catalog\ManufacturerTemplate.ProductsInGridOrLines - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />

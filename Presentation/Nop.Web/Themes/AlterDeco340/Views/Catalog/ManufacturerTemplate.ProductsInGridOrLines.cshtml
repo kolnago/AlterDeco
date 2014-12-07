@@ -11,9 +11,12 @@
         var manufacturerUrl = Url.RouteUrl("Manufacturer", new { SeName = Model.SeName }, this.Request.Url.Scheme);
         Html.AddCanonicalUrlParts(manufacturerUrl);
     }
+    var gs = EngineContext.Current.Resolve<GalleryService>();
+    var picturesModel = gs.GetProduct(Model.Name);
 }
 @using Nop.Core.Domain.Seo;
 @using Nop.Core.Infrastructure;
+@using Nop.Web.Infrastructure.Gallery
 @using Nop.Web.Models.Catalog;
 @using Nop.Web.Extensions;
 <div class="page category-page">
@@ -31,6 +34,15 @@
             </div>
         }
         @Html.Widget("manufacturerdetails_before_featured_products")
+        @*galerie*@
+        @if (picturesModel.PictureModels.Count > 0)
+        {
+            <h4>Galerie</h4>
+            <div>
+                @Html.Partial("_ProductDetailsPicturesGallery", picturesModel)
+            </div>
+        }
+        <h4>Výrobky</h4>
         @*featured products*@
         @if (Model.FeaturedProducts.Count > 0)
         {
