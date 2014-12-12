@@ -24,34 +24,47 @@
                 @*description*@
 
                 @*<div class="category-description">
-                    Description - static
-                </div>*@
-                <div class="row">
+                        Description - static
+                    </div>*@
+                @{
+                    int i = 0;
+                }
 
-                    <div class="product-grid home-page-product-grid">
-                        @foreach (var item in Model)
+                <div class="product-grid home-page-product-grid">
+                    @foreach (var item in Model)
+                    {
+                        i++;
+                        if (i % 3 == 0)
                         {
-                            <div class="col-md-4">
-                                <div class="pull-text-center">
-                                    <div class="picture">
+                            @Html.Raw("<div class='row'>")
+                        }
+
+                        <div class="col-md-4">
+                            <div class="pull-text-center">
+                                <div class="picture" style="float:left;">
+                                    <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.SeName })" title="@item.PictureModel.Title">
+                                        <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl" title="@item.PictureModel.Title" />
+                                    </a>
+                                </div>
+                                <div class="details">
+                                    <h2 class="product-title">
                                         <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.SeName })" title="@item.PictureModel.Title">
-                                            <img alt="@item.PictureModel.AlternateText" src="@item.PictureModel.ImageUrl" title="@item.PictureModel.Title" />
+                                            @item.Name
                                         </a>
-                                    </div>
-                                    <div class="details">
-                                        <h2 class="product-title">
-                                            <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.SeName })" title="@item.PictureModel.Title">
-                                                @item.Name
-                                            </a>
-                                        </h2>
-                                        
-                                    </div>
+                                    </h2>
+
                                 </div>
                             </div>
+                        </div>
+                        if ((i % 3 == (3 - 1)) ||
+                            //last image
+                (i == (Model.Count - 1)))
+                        {
+                            @Html.Raw("</div>")
                         }
-                    </div>
-
+                    }
                 </div>
+
             </div>
         </div>
 

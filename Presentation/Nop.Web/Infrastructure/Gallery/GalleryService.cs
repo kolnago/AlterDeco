@@ -68,7 +68,7 @@ namespace Nop.Web.Infrastructure.Gallery
                     {
                         pictureModels.Add(new PictureModel()
                         {
-                            ImageUrl = _pictureService.GetPictureUrl(picture, _mediaSettings.ProductThumbPictureSizeOnProductDetailsPage),
+                            ImageUrl = _pictureService.GetPictureUrl(picture, 380),
                             FullSizeImageUrl = _pictureService.GetPictureUrl(picture),
                             Title = string.Format(_localizationService.GetResource("Media.Product.ImageLinkTitleFormat.Details"), model.Name),
                             AlternateText = string.Format(_localizationService.GetResource("Media.Product.ImageAlternateTextFormat.Details"), model.Name),

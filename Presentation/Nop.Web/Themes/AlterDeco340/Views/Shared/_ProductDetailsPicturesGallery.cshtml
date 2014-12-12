@@ -19,13 +19,13 @@
 
                 if (i % productPerRow == 0)
                 {
-                    @Html.Raw("<div>")
+                    @Html.Raw("<div class='row'>")
                 }
-
-                <a class="thumb-popup-link" href="@picture.FullSizeImageUrl" title="@Model.Name">
-                    <img src="@picture.ImageUrl" alt="@picture.AlternateText" title="@picture.Title" />
-                </a>
-
+                <div class="col-md-3" style="margin-bottom:30px;">
+                    <a class="thumb-popup-link" href="@picture.FullSizeImageUrl" title="@Model.Name">
+                        <img src="@picture.ImageUrl" alt="@picture.AlternateText" title="@picture.Title" class="img-responsive" style="padding:10px;border: 1px solid #999999;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)" />
+                    </a>
+                </div>
                 if ((i % productPerRow == (productPerRow - 1)) ||
                     //last image
                     (i == (Model.PictureModels.Count - 1)))
