@@ -1,0 +1,66 @@
+﻿@model dynamic
+
+
+
+<div class="section-header">
+
+</div>
+<table class="adminContent">
+    <tr>
+        <td>
+            <div id="gallery-grid"></div>
+
+            <script>
+                $(document).ready(function () {
+                    $("#gallery-grid").kendoGrid({
+                        dataSource: {
+                            type: "json",
+                            transport: {
+                                read: {
+                                    url: "@Html.Raw(Url.Action("GalleryList", "Gallery"))",
+                                    type: "POST",
+                                    dataType: "json"
+                                }
+                            },
+                            schema: {
+                                data: "Data",
+                                total: "Total",
+                                errors: "Errors"
+                            },
+                            error: function (e) {
+                                display_kendoui_grid_error(e);
+                                // Cancel the changes
+                                this.cancelChanges();
+                            },
+                            serverPaging: true,
+                            serverFiltering: true,
+                            serverSorting: true
+                        },
+                        pageable: {
+                            refresh: true,
+                            numeric: false,
+                            previousNext: false,
+                            info: false
+                        },
+                        scrollable: false,
+                        columns: [{
+                            field: "Id",
+                            title: "Id",
+                            width: 50
+                        }, {
+                            field: "Name",
+                            title: "@T("Admin.Configuration.Countries.Fields.Name")",
+                            width: 300
+                        }, {
+                            field: "Id",
+                            title: "@T("Admin.Common.Edit")",
+                            width: 50,
+                            template: '<a href="Edit/#=Id#">@T("Admin.Common.Edit")</a>'
+                        }]
+                    });
+                });
+            </script>
+        </td>
+    </tr>
+</table>
+
